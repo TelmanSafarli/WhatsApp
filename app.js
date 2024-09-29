@@ -1,52 +1,58 @@
 "use strict";
 $(document).ready(function () {
-    $('#btnMe').click(function (e) {
-        e.preventDefault();
-        let a = (aClass = '') => {
-            if (!$.trim($('#inpMe').val()) == '') {
-                let newH3 = $(`<h3> </h3>`);
-                let line = $(`<div class='line'> </div>`);
-                let bigDiv = $(`<div class = "${aClass}"></div>`)
-                $(newH3).append($('#inpMe').val());
-                $(line).append(newH3);
-                $(bigDiv).append(line);
 
-                return bigDiv;
+    $("#me").click(function (e) {
+        e.preventDefault();
+        function myel(myclass = "") {
+            if (!$.trim($("#inputme").val()) == "") {
+                let vall = $("#inputme").val()
+                    , newH3 = $('<h3> </h3>')
+                    , newDiv = $('<div class="line"> </div>')
+                    , bigDiv = $(`<div ${myclass} > </div>`)
+                $(newH3).append(vall)
+                $(newDiv).append(newH3)
+                $(bigDiv).append(newDiv)
+                return bigDiv
             }
             else {
-                return;
+                return
             }
         }
-        $('#youBox').append(a());
-        $('#myBox').append(a(`end`));
-        $('#inpMe').val("");
-        document.querySelector('#myBox').scrollTo(0, document.querySelector('#myBox').scrollHeight);
-        document.querySelector('#youBox').scrollTo(0, document.querySelector('#youBox').scrollHeight)
+        $("#messageyou").append(myel())
+        $("#messageme").append(myel('class= "end"'))
+        $("#inputme").val("")
+
+        document.querySelector("#messageme").scrollTo(0, document.querySelector("#messageme").scrollHeight)
+        document.querySelector("#messageyou").scrollTo(0, document.querySelector("#messageyou").scrollHeight)
 
     });
 
-    $('#btnYou').click(function (e) {
+    $("#you").click(function (e) {
         e.preventDefault();
-        let a = (aClass = '') => {
-            if (!$.trim($('#inpYou').val()) == '') {
-                let newH3 = $(`<h3> </h3>`);
-                let line = $(`<div class='line'> </div>`);
-                let bigDiv = $(`<div class = "${aClass}"></div>`)
-                $(newH3).append($('#inpYou').val());
-                $(line).append(newH3);
-                $(bigDiv).append(line);
-
-                return bigDiv;
+        function myel(myclass = "") {
+            if (!$.trim($("#inputyou").val()) == "") {
+                let vall = $("#inputyou").val()
+                    , newH3 = $('<h3> </h3>')
+                    , newDiv = $('<div class="line"> </div>')
+                    , bigDiv = $(`<div ${myclass} > </div>`)
+                $(newH3).append(vall)
+                $(newDiv).append(newH3)
+                $(bigDiv).append(newDiv)
+                return bigDiv
             }
             else {
-                return;
+                return
             }
         }
-        $('#myBox').append(a());
-        $('#youBox').append(a(`end`));
-        $('#inpYou').val("");
-        document.querySelector('#youBox').scrollTo(0, document.querySelector('#youBox').scrollHeight)
-        document.querySelector('#myBox').scrollTo(0, document.querySelector('#myBox').scrollHeight)
+        $("#messageme").append(myel())
+        $("#messageyou").append(myel('class= "end"'))
+        $("#inputyou").val("")
+
+        document.querySelector("#messageme").scrollTo(0, document.querySelector("#messageme").scrollHeight)
+        document.querySelector("#messageyou").scrollTo(0, document.querySelector("#messageyou").scrollHeight)
 
     });
+
+
+
 });
