@@ -10,23 +10,24 @@ a:hover {
   color: black;
 }
 
-#whatsapp {
-  padding: 80px;
+section {
+  padding: 80px 0;
 }
-#whatsapp .chat {
-  width: 458px;
+
+#whatsapp .box {
+  width: 450px;
   border-radius: 13px;
   border: 22px solid #e8e7f8;
   background-color: #e8e7f8;
   margin-bottom: 30px;
 }
-#whatsapp .chat .message {
+#whatsapp .box .message {
   height: 216px;
   border-radius: 13px;
   background-color: white;
   padding: 10px;
 }
-#whatsapp .chat .message .line {
+#whatsapp .box .message .line {
   display: inline-block;
   background-color: #7490f3;
   border-radius: 20px;
@@ -35,21 +36,24 @@ a:hover {
   margin: 0;
   margin-bottom: 10px;
 }
-#whatsapp .chat .message .line h3 {
+#whatsapp .box .message .line h3 {
   color: white;
   padding: 8px 6px;
 }
-#whatsapp .chat .message .end {
+#whatsapp .box .message .end {
   display: flex;
   justify-content: flex-end;
 }
-#whatsapp .chat .message .end .line {
+#whatsapp .box .message .end .line {
   display: inline-block;
   word-wrap: break-word;
   max-width: 70%;
 }
-#whatsapp .chat .message {
+#whatsapp .box .message {
   overflow: auto;
+}
+#whatsapp .box .message::-webkit-scrollbar {
+  display: none;
 }
 #whatsapp .text {
   display: flex;
