@@ -17,8 +17,8 @@ section {
 #whatsapp .box {
   width: 450px;
   border-radius: 13px;
-  border: 22px solid #e8e7f8;
-  background-color: #e8e7f8;
+  border: 22px solid #e4ecff;
+  background-color: #e4ecff;
   margin-bottom: 30px;
 }
 #whatsapp .box .message {
@@ -29,7 +29,7 @@ section {
 }
 #whatsapp .box .message .line {
   display: inline-block;
-  background-color: #7490f3;
+  background-color: #90a2d5;
   border-radius: 20px;
   word-wrap: break-word;
   max-width: 70%;
@@ -49,11 +49,11 @@ section {
   word-wrap: break-word;
   max-width: 70%;
 }
-#whatsapp .box .message {
-  overflow: auto;
-}
 #whatsapp .box .message::-webkit-scrollbar {
   display: none;
+}
+#whatsapp .box .message {
+  overflow: auto;
 }
 #whatsapp .text {
   display: flex;
@@ -66,7 +66,7 @@ section {
   padding: 2px 12px;
 }
 #whatsapp .text .sent {
-  background-color: #7490f3;
+  background-color: #829fd7;
   border-radius: 20px;
 }
 #whatsapp .text .sent h3 {
